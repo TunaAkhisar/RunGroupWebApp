@@ -22,7 +22,8 @@ namespace RunGroupWebApp.Repository
 
         public bool Delete(Club club)
         {
-            throw new NotImplementedException();
+            _context.Clubs.Remove(club);
+            return Save();
         }
 
         public async Task<IEnumerable<Club>> GetAll()
