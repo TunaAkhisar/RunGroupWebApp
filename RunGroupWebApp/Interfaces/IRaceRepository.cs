@@ -1,4 +1,4 @@
-﻿using RunGroupWebApp.Models;
+﻿using RunGroopWebApp.Models;
 
 namespace RunGroupWebApp.Interfaces
 {

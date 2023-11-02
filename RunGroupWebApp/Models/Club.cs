@@ -1,8 +1,9 @@
 ﻿using RunGroupWebApp.Data.Enum;
+using RunGroupWebApp.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RunGroupWebApp.Models
+namespace RunGroopWebApp.Models
 {
     public class Club
     {
@@ -16,7 +17,7 @@ namespace RunGroupWebApp.Models
         public Address? Address { get; set; }
         public ClubCategory ClubCategory { get; set; }
         [ForeignKey("AppUser")]
-        public int? AppUserId { get; set; }
+        public string? AppUserId { get; set; }
         public AppUser? AppUser { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using RunGroupWebApp.Data.Enum;
+﻿using RunGroopWebApp.Models;
+using RunGroupWebApp.Data.Enum;
 using RunGroupWebApp.Models;
 
 namespace RunGroopWebApp.ViewModels

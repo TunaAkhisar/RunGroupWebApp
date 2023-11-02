@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using RunGroopWebApp.Models;
 using RunGroopWebApp.ViewModels;
-using RunGroupWebApp.Data;
 using RunGroupWebApp.Interfaces;
-using RunGroupWebApp.Models;
 using RunGroupWebApp.ViewModels;
 
 namespace RunGroupWebApp.Controllers

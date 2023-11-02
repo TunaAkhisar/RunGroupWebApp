@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RunGroopWebApp.Models;
 using RunGroupWebApp.Data;
 using RunGroupWebApp.Interfaces;
 using RunGroupWebApp.Models;
