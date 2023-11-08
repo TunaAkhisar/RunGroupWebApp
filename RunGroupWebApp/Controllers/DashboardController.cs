@@ -9,10 +9,12 @@ namespace RunGroupWebApp.Controllers
     {
         private readonly IDashboardRepository _dashboardRepository;
         private readonly IPhotoService _photoService;
-        public DashboardController(IDashboardRepository dashboardRepository, IPhotoService photoService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public DashboardController(IDashboardRepository dashboardRepository, IPhotoService photoService, IHttpContextAccessor httpContextAccessor)
         {
             _dashboardRepository = dashboardRepository;
             _photoService = photoService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<IActionResult> Index()
@@ -28,5 +30,11 @@ namespace RunGroupWebApp.Controllers
 
             return View(dashboardViewModel);
         }
+
+        public async Task<IActionResult> EditUserProfile()
+        {
+            return View();
+        }
+
     }
 }
