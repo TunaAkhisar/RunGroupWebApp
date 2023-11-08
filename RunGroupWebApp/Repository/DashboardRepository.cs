@@ -1,4 +1,5 @@
-﻿using RunGroopWebApp;
+﻿using Microsoft.EntityFrameworkCore;
+using RunGroopWebApp;
 using RunGroopWebApp.Models;
 using RunGroupWebApp.Data;
 using RunGroupWebApp.Interfaces;
@@ -30,24 +31,26 @@ namespace RunGroupWebApp.Repository
             return userRaces.ToList();
         }
 
-        public Task<AppUser> GetByIdNoTracking(string id)
+        public async Task<AppUser> GetByIdNoTracking(string id)
         {
-            throw new NotImplementedException();
+            return await _context.Users.Where(u => u.Id == id).AsNoTracking().FirstOrDefaultAsync();
         }
 
-        public Task<AppUser> GetUserById(string id)
+        public async Task<AppUser> GetUserById(string id)
         {
-            throw new NotImplementedException();
+            return await _context.Users.FindAsync(id);
         }
 
         public bool Save()
         {
-            throw new NotImplementedException();
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
         }
 
         public bool Update(AppUser user)
         {
-            throw new NotImplementedException();
+            _context.Users.Update(user);
+            return Save();
         }
     }
 }
